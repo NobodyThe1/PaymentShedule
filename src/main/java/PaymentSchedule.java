@@ -58,44 +58,42 @@ public class PaymentSchedule {
 
         }
 
-        for (LocalDate date1 : Holiday.createHoliday().getJanuaryHolidays()) {
+        for (LocalDate date1 : Holiday.createHoliday().get2025JanuaryHolidays()) {
             if (date1.equals(date)) {
-                date = LocalDate.of(2025, 1, 9);
+                date = Holiday.createHoliday().getDateAfter2025JanuaryHolidays();
             }
         }
 
-        for (LocalDate date1 : Holiday.createHoliday().getMay1Holidays()) {
+        for (LocalDate date1 : Holiday.createHoliday().get2025May1Holidays()) {
             if (date1.equals(date)) {
-                date = LocalDate.of(2025, 5, 5);
+                date = Holiday.createHoliday().getDateAfter2025May1Holidays();
             }
         }
 
-        for (LocalDate date1 : Holiday.createHoliday().getMay2Holidays()) {
+        for (LocalDate date1 : Holiday.createHoliday().get2025May2Holidays()) {
             if (date1.equals(date)) {
-                date = LocalDate.of(2025, 5, 12);
+                date = Holiday.createHoliday().getDateAfter2025May2Holidays();
             }
         }
 
-        for (LocalDate date1 : Holiday.createHoliday().getJuneHolidays()) {
+        for (LocalDate date1 : Holiday.createHoliday().get2025JuneHolidays()) {
             if (date1.equals(date)) {
-                date = LocalDate.of(2025, 6, 16);
+                date = Holiday.createHoliday().getDateAfter2025JuneHolidays();
             }
         }
 
-        for (LocalDate date1 : Holiday.createHoliday().getNovemberHolidays()) {
+        for (LocalDate date1 : Holiday.createHoliday().get2025NovemberHolidays()) {
             if (date1.equals(date)) {
-                date = LocalDate.of(2025, 11, 5);
+                date = Holiday.createHoliday().getDateAfter2025NovemberHolidays();
             }
         }
 
-        for (LocalDate date1 : Holiday.createHoliday().getHolidays()) {
+        for (LocalDate date1 : Holiday.createHoliday().get2025Holidays()) {
             if (date1.equals(date)) {
-                date = LocalDate.of(2026, 1, 9);
+                date = Holiday.createHoliday().getDateAfter2025Holidays();
             }
         }
 
         return date;
     }
-
-
 }
